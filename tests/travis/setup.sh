@@ -3,6 +3,8 @@
 if [ ${TRAVIS_OS_NAME} == "osx" ]; then
     brew update
     brew install graphviz
+    echo "export CC=/usr/local/bin/gcc" >> ~/.bash_profile
+    source ~/.bash_profile
 fi
 
 if [ ${TASK} == "lint" ]; then
